@@ -12,12 +12,26 @@ const DISHES:Dish[] = [
     price: '4.99',
     // tslint:disable-next-line:max-line-length
     description: 'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
-    comments : [{
-      text:'Muito Baum esse prato !',
-      rank:5,
-      author:'Goku',
-      date:'20220129'
-    }]
+    comments :[
+      {
+        text:'Muito Baum esse prato !',
+        rank:5,
+        author:'Goku',
+        date:'20220129'
+      },
+      {
+        text:'Parabéns ! Esse prato está demais!',
+        rank:5,
+        author:'Gohan',
+        date:'20220129'
+      },
+      {
+        text:'Uma merda!',
+        rank:1,
+        author:'Radits',
+        date:'20220129'
+      },
+  ]
 
   },
   {
@@ -61,26 +75,23 @@ const DISHES:Dish[] = [
     label: '',
     price: '2.99',
     description: 'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
-    comments : {
+    comments : [{
       text:'Eu não como gororobas !',
       rank:0,
       author:'Picholo',
       date:'20210712'
-    }
+    }]
   }
 ]
 
-
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: 'dish-detail',
+  templateUrl: './dish-detail.component.html',
+  styleUrls: ['./dish-detail.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class DishDetailComponent implements OnInit {
 
-  dishes:Dish[] = DISHES
-  selectedDish :Dish = DISHES[0]
-
+  selectedDish:Dish = DISHES[0]
 
   constructor() { }
 
